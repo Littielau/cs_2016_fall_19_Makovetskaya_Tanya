@@ -1,1 +1,145 @@
+\documentclass[12pt]{book}
+\usepackage[cp1251]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[T1]{fontenc}
+\usepackage[english, russian]{babel}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+
+\usepackage{color}
+\definecolor{light-gray}{rgb}{0.8,0.8,0.8}
+\setcounter{chapter}{4}
+\setcounter{section}{3}
+\setcounter{subsection}{4}
+\setcounter{equation}{37}
+
+\setcounter{page}{69}
+
+\begin{document}
+Each fraction has the form $1+x$ with $x=\pm 1\!/3$. Because x is small, one
+term of the logarithm series might provide reasonable accuracy. Let's therefore use $\ln(1+x)\approx x$ to approximate the two logarithms:
+\begin{equation}
+\ln2\approx \frac 13 - (-\frac 13)=\frac 23.
+\end{equation}
+This estimate is accurate to within 5\%!
+The rewriting trick has helped to compute $\pi$ (by rewriting the $\arctan{x}$ series) and to estimate $\ln(1+x)$ (by rewriting $x$ itself). This idea therefore becomes a method --- a trick that I use twice (this definition is often attributed to Polya).\\
+
+\colorbox{light-gray}{
+\begin{minipage}{\textwidth}
+{\bf Problem 4.20 How many terms?}\\
+The full Taylor series for the logarithm is
+\begin{equation}
+\ln(1+x)=\sum_{1}^\infty (-1)^{n+1} \frac {x^{n}}n
+\end{equation}
+
+If you set $x=1$ in this series, how many terms are required to estimate $\ln2$ to within 5\%?\\
+
+{\bf Problem 4.21 Second rewriting}\\
+Repeat the rewriting method by rewriting $ 4\!/3$ and $ 2\!/3$; then estimate $\ln2$ using only one term of the logarithm series. How accurate is the revised estimate?\\
+
+{\bf Problem 4.22 Two terms of the Taylor series}\\
+
+After rewriting $\ln2$ as $\ln(4\!/3) - \ln(2\!/3)$, use the two-term approximation that $\ln(1+x)\approx x-x^2\!/2$ to estimate $\ln2$ Compare the approximation to the one-term estimate, namely $ 2\!/3$. (Problem 4.24 investigates a pictorial explanation.)\\
+
+{\bf Problem 4.23 Rational-function approximation for the logarithm}\\
+The replacement $\ln2=\ln(4\!/3) - \ln(2\!/3)$ has the general form
+\begin{equation}
+\ln(1+x)=\ln \frac{1+y}{1-y},
+\end{equation}
+where $y=x\!/(2+x)$.
+\end{minipage}
+}
+\colorbox{light-gray}{
+\begin{minipage}{\textwidth}
+Use the expression for $y$ and the one-term series $\ln(1+x)\approx x$ to express $\ln(1+x)$ as a rational function of $x$ (as a ratio of polynomials in $x$). What are the first few terms of its Taylor series?
+Compare those terms to the first few terms of the $\ln(1+x)$ Taylor series, and thereby explain why the rational-function approximation is more accurate than even the two-term series $\ln(1+x)\approx x-x^2\!/2$.\\
+
+{\bf Problem 4.24 Pictorial interpretation of the rewriting}\\
+\renewcommand{\labelenumi}{\alph{enumi})}
+\begin{enumerate}
+\item Use the integral representation of $\ln(1+x)$ to explain why the shaded area is $\ln2$.
+\item Outline the region that represents
+\begin{equation}
+\ln\frac 43 - \ln\frac 23
+\end{equation}
+when using the circumscribed-rectangle approximation for each logarithm.
+\item Outline the same region when using the trapezoid approximation\\ $\ln(1+x)\approx x-x^2\!/2$. Show pictorially that this region, although a different shape, has the same area as the region that you drew in item b.
+\end{enumerate}
+\end{minipage}
+}
+\section{ Bisecting a triangle}
+Pictorial solutions are especially likely for a geometric problem:\\
+
+\noindent{\it What is the shortest path that bisects an equilateral triangle into two regions of equal area?}\\
+
+\noindent The possible bisecting paths form an uncountably infinite set. To manage the complexity, try easy cases (Chapter 2)—draw a few equilateral triangles and bisect them with easy paths. Patterns, ideas, or even a solution might emerge.\\
+
+\noindent{\it What are a few easy paths?}\\
+
+\noindent The simplest bisecting path is a vertical segment that splits the triangle into two right triangles each with base $1\!/2$. This
+path is the triangle's altitude, and it has length
+\begin{equation}
+l=\sqrt{1^{2}-(1\!/2)^{2}}=\frac{\sqrt{3}}{2} \approx 0.866.
+\end{equation}
+An alternative straight path splits the triangle into a trapezoid and a small triangle.\\
+
+\noindent{\it What is the shape of the smaller triangle, and how long is the path?}\\
+
+\noindent The triangle is similar to the original triangle, so it too is equilateral.\\Furthermore, it has one-half of the area of the original triangle, so its three sides, one of which is the bisecting path, are a factor of $\sqrt{2}$ smaller than the sides of the original triangle. Thus this path has length $1\!/\sqrt{2} \approx 0/707$ -- a substantial improvement on the vertical path with length $\sqrt{3}\!/2$.\\
+
+\colorbox{light-gray}{
+\begin{minipage}{\textwidth}
+{\bf Problem 4.25 All one-segment paths}\\
+An equilateral triangle has infinitely many one-segment bisecting paths. A few of them are shown in the figure. Which one-segment path is the shortest?
+\end{minipage}
+}\\
+
+\noindent Now lets investigate easy two-segment paths. One possible path encloses a diamond and excludes two small triangles. The two small triangles occupy one-half of the entire area. Each small triangle therefore occupies one-fourth of the entire area and has side length $1\!/2$. Because the bisecting path contains two of these sides, it has length 1. This path is, unfortunately, longer than our two one-segment candidates, whose lengths are $1\!/\sqrt{2}$ and $\sqrt{3}\!/2$. Therefore, a reasonable conjecture is that the shortest path has the fewest segments. This conjecture deserves to be tested (Problem 4.26).\\
+
+\colorbox{light-gray}{
+\begin{minipage}{\textwidth}
+{\bf Problem 4.26 All two-segment paths}\\
+Draw a figure showing the variety of two-segment paths. Find the shortest path,
+showing that it has length
+\begin{equation}
+l=2\times 3^{1\!/4}\times \sin 15^{\circ} \approx 0.681.
+\end{equation}
+{\bf Problem 4.27 Bisecting with closed paths}\\
+The bisecting path need not begin or end at an edge of the triangle. Two examples are illustrated here.
+\end{minipage}
+}\\
+
+\colorbox{light-gray}{
+\begin{minipage}{\textwidth}
+Do you expect closed bisecting paths to be longer or shorter than the shortest one-segment path? Give a geometric reason for your conjecture, and check the conjecture by finding the lengths of the two illustrative closed paths.
+\end{minipage}
+}\\
+
+\noindent{\it Does using fewer segments produce shorter paths?}\\
+
+\noindent The shortest one-segment path has an approximate length of $0.707$; but the shortest two-segment path has an approximate length of $0.681$.The length decrease suggests trying extreme paths: paths with an infinite number of segments. In other words, try curved paths. The easiest curved path is probably a circle or a piece of a circle.\\
+
+\noindent{\it What is a likely candidate for the shortest circle or piece of a circle that bisects the triangle?}\\
+
+\noindent Whether the path is a circle or piece of a circle, it needs a center.However, putting the center inside the triangle and using a full circle produces a long bisecting path (Problem 4.27). The only other plausible center is a vertex of the triangle, so imagine a
+bisecting arc centered on one vertex.\\
+
+\noindent{\it How long is this arc?}\\
+
+\noindent The arc subtends one-sixth $(60^{\circ})$ of the full circle, so its length is $l=\pi r\!/3$, where $r$ r is radius of the full circle. To find the radius, use the requirement that the arc must bisect the triangle. Therefore, the arc encloses one-half
+of the triangle's area. The condition on $r$ is that $\pi r^2=3\sqrt{3}\!/4$:
+\begin{equation}
+\frac 16 \times \underbrace{area~of~the~full~circle}_{\pi r^2}=\frac 12 \times \underbrace{area~of~the~triangle}_{\sqrt{3}\!/4}.
+\end{equation}
+\noindent The radius is therefore $(3\sqrt{3}\!/4\pi)^{1\!/2}$; the length of the arc is $\pi r\!/3$, which is approximately $0.673$. 
+This curved path is shorter than the shortest two-segment path. It might be the shortest possible path.\\
+
+\noindent To test this conjecture, we use symmetry. Because an equilateral triangle is one-sixth of a hexagon, build a hexagon by replicating the bisected equilateral triangle. Here is the hexagon built from the triangle bisected by a horizontal line.\\
+
+\noindent The six bisecting paths form an internal hexagon whose area is one-half of the area of the large hexagon.\\
+
+\noindent{\it What happens when replicating the triangle bisected by the circular arc?}\\
+\end{document} 
 
