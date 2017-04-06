@@ -37,7 +37,7 @@ max=z;
 }
 }
 
-printf("max= %i\n",max);
+printf("max= %c\n",(char)max);
 
 return 0;
 
