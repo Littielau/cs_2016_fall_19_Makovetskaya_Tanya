@@ -3,7 +3,8 @@
 #include <locale.h>
 int main()
 {
-    int i,j=0;
+    int i=0;
+    int j=0;
     char a[1000], b[1000];
     printf("Vvedite stroky\n");
     gets(a);
