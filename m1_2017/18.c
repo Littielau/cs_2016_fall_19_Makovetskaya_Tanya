@@ -15,7 +15,9 @@ void copy(char *c,char *x)
 int main()
 {
     char a[100],b[100];
+    printf("name");
     gets(a);
+    printf("new name");
     gets(b);
     copy(a,b);
     printf("Ok");
