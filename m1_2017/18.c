@@ -20,6 +20,6 @@ int main()
    
     gets(b);
     copy(a,b);
-    printf("Ok");
+    printf("done\n");
     return 0;
 }
