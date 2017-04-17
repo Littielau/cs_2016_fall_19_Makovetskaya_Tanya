@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
-
 void copy(char *c,char *x)
 { char str[1000];
 FILE *C,*X;
@@ -16,12 +15,13 @@ fputc(i,X);
 }
 
 int main()
+{setlocale(LC_CTYPE, "Russian");
 char a[1000],b[1000];
-printf("Vvedite pyt k faily(C:\/Papka\/name.txt)");
+printf("Введите путь к расположению файла который копируют(C:\/Games\/filename1.txt)");
 gets(a);
-printf("Kyda kopirovat (C:\/papka\/name2.txt)");
+printf("Введите расположение файла куда копировать (C:\/Games\/filename2.txt)");
 gets(b);
 copy(a,b);
-printf("done");
+printf("Сделано");
 return 0;
 }
