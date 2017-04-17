@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <locale.h>
 
 void copy(char *c,char *x)
 { char str[1000];
