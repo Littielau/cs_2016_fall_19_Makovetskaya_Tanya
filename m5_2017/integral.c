@@ -35,11 +35,11 @@ int main()
     double o1,o2;
     int d;
     setlocale(LC_ALL,"Rus");
-    printf("Введите начало диапазона\n");
+    printf("Функция y=7x\nВведите начало диапазона\n");
     scanf("%lf",&o1);
     printf("Введите конец диапазона\n");
     scanf("%lf",&o2);
-    printf("Введите  количество разбиений\n");
+    printf("Введите  количество разбиений (примерно 100000)\n");
     scanf("%i",&d);
     printf("интеграл = %lf\n",integral(o1,o2,d));
     return 0;
