@@ -32,12 +32,15 @@ double integral(double a, double b, int n)
 }
 int main()
 {
-     double o1,o2;
+    double o1,o2;
     int d;
-    printf("Vvedite diapason cherez zapatyu\n");
-    scanf("%lf,%lf",&o1, &o2);
-    printf("Vvedite kolichestvo razbieniy\n");
+    setlocale(LC_ALL,"Rus");
+    printf("Введите начало диапазона\n");
+    scanf("%lf",&o1);
+    printf("Введите конец диапазона\n");
+    scanf("%lf",&o2);
+    printf("Введите  количество разбиений\n");
     scanf("%i",&d);
-    printf("integral= %lf\n",integral(o1,o2,d));
+    printf("интеграл = %lf\n",integral(o1,o2,d));
     return 0;
 }
