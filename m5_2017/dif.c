@@ -25,7 +25,7 @@ int main(void)
 {
     double o1,o2,d;
     setlocale(LC_ALL,"Rus");
-    printf("введите начало диапазона\n");
+    printf("Функция у=x^3\nвведите начало диапазона\n");
     scanf("%lf",&o1);
     printf("введите конец диапазона\n");
     scanf("%lf",&o2);
