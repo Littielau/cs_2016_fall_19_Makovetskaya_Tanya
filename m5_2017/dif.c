@@ -4,7 +4,7 @@
 float f(float x)
 {
     float y;
-    y=x*x*x;
+    y=x*x;
     return(y);
 }
 
@@ -25,7 +25,7 @@ int main(void)
 {
     double o1,o2,d;
     setlocale(LC_ALL,"Rus");
-    printf("Функция у=x^3\nвведите начало диапазона\n");
+    printf("Функция у=x^2\nвведите начало диапазона\n");
     scanf("%lf",&o1);
     printf("введите конец диапазона\n");
     scanf("%lf",&o2);
